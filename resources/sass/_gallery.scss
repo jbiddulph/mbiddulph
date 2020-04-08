@@ -1,0 +1,47 @@
+/* ---- .grid-item ---- */
+.grid {
+    background: #fff;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 18.5%;
+    margin-right: 0.75%;
+    margin-left: 0.75%;
+}
+
+.grid-item {
+    float: left;
+    position: relative;
+    font-size: 9px;
+    a {
+        color: #000000;
+    }
+    a:hover {
+        color: #000000;
+    }
+    span.fancybox-title {
+        background-color: rgba(255,255,255,0.5);
+        position: absolute;
+        bottom: 0;
+        left:0;
+        padding:4px;
+    }
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+.grid-item {
+    margin-bottom: 1.5%;
+}

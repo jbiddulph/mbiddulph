@@ -1,0 +1,26 @@
+.paginate {
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.pagination {
+    li.page-item {
+        a.page-link {
+            color: #000000;
+            font-size: 12px;
+        }
+        span.page-link {
+            background-color: rgba(0,0,0,0.5);
+        }
+    }
+}
+.pagination li.page-item.active span.page-link {
+    border-color: rgba(0,0,0,0.5)!important;
+    font-size:12px;
+}
+.pagination li.page-item.disabled span.page-link {
+    background-color: rgba(0,0,0,0.1)!important;
+    font-size:12px;
+}
+
