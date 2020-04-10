@@ -8,7 +8,7 @@ class Gallery extends Model
 {
     //
     protected $fillable = [
-        'aidkey', 'title', 'size', 'category', 'artistsnotes', 'price', 'photo_id', 'file'
+        'aidkey', 'title', 'size', 'category', 'artistNotes', 'price', 'photo_id', 'file'
     ];
 
 }

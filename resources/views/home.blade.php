@@ -78,13 +78,13 @@
                                 @endforeach
                             </ul>
                             <form action="{{route('category.add')}}" method="post" enctype="multipart/form-data">@csrf
-                            <label for="name">Add category</label>
-                            <input type="text" name="categoryname" id="name" class="form-control @error('height') is-invalid @enderror" value="{{ old('categoryname') }}">
-                            @error('height')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
+                                <label for="name">Add category</label>
+                                <input type="text" name="categoryname" id="name" class="form-control @error('height') is-invalid @enderror" value="{{ old('categoryname') }}">
+                                @error('height')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                                 <input type="submit" value="Add Category" class="btn btn-dark">
                             </form>
                         </div>
@@ -141,7 +141,7 @@
                                 <label for="title">Price</label>
                                 <input type="text" name="price" class="form-control">
                                 <label for="category">Category</label>
-                                <select name="category_id" class="form-control">
+                                <select name="category" class="form-control">
                                     <option value="">Please select</option>
                                     @foreach(App\Category::all() as $cat)
                                         <option value="{{$cat->id}}">{{$cat->categoryname}}</option>
@@ -185,46 +185,15 @@
                             </a>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editArtModal{{$artwork->id}}">
+                            <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editArtdescModal{{$artwork->id}}">
                                 Edit
+                            </button>
+                            <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editArtModal{{$artwork->id}}">
+                                Change Art
                             </button>
                         </td>
                     </tr>
-                        <!-- Modal -->
-                        <div class="modal fade" id="editArtModal{{$artwork->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">{{$artwork->title}}</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="" method="post">@csrf
-                                            <label for="title">Title</label>
-                                            <input type="text" class="form-control" name="title" value="{{$artwork->title}}">
-                                            <label for="title">Size</label>
-                                            <input type="text" class="form-control" name="size" value="{{$artwork->size}}">
-                                            <label for="title">Category</label>
-                                            <select name="category" id="">
-                                                <option value="">Please select</option>
-                                                @foreach(App\Category::all() as $cat)
-                                                    <option value="{{$cat->id}}"{{$artwork->category_id==$cat->id?'selected':''}}>{{$cat->categoryname}}</option>
-                                                @endforeach
-                                            </select>
-                                            <input type="text" class="form-control" name="title" value="{{$artwork->title}}">
-                                            <label for="title">Notes</label>
-                                            <textarea name="artistNotes" id="" cols="30" rows="10">{{$artwork->artistNotes}}</textarea>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                 @endforeach
                 </table>
                 <div class="card-body">
@@ -240,4 +209,67 @@
         </div>
     </div>
 </div>
+@foreach($artworks as $artwork)
+<!-- Modal -->
+<div class="modal fade" id="editArtdescModal{{$artwork->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="{{route('gallery.update', [$artwork->id])}}" method="POST">@csrf
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{$artwork->title}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" value="{{$artwork->title}}">
+                    <label for="title">Size</label>
+                    <input type="text" class="form-control" name="size" value="{{$artwork->size}}">
+                    <label for="title">Category</label>
+                    <select name="category" class="form-control">
+                        <option value="">Please select</option>
+                        @foreach(App\Category::all() as $cat)
+                            <option value="{{$cat->id}}"{{$artwork->category==$cat->id?'selected':''}}>{{$cat->categoryname}}</option>
+                        @endforeach
+                    </select>
+                    <label for="title">Notes</label>
+                    <textarea name="artistNotes" class="form-control" cols="30" rows="6">{{$artwork->artistNotes}}</textarea>
+                    Live: <input data-id="{{$artwork->id}}" name="islive" class="toggle-live" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $artwork->islive ? 'checked' : '' }}>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-dark">Update Artwork</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="editArtModal{{$artwork->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="{{route('artwork.update', [$artwork->id])}}" method="POST" enctype="multipart/form-data">@csrf
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">{{$artwork->title}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a data-fancybox="gallery" href="/images/gallery/{{$artwork->file}}">
+                        <img src="/images/gallery/{{$artwork->file}}" width="100" alt="">
+                    </a>
+                    <label for="artwork">Artwork</label>
+                    <input type="file" id="artwork" name="newfile" class="image form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-dark">Update Artwork</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
 @endsection

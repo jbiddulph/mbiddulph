@@ -17,8 +17,6 @@ Route::get('/', 'GalleryController@home');
 
 Auth::routes();
 
-
-Route::get('/gallery', 'ArtworksController@index');
 Route::get('/about', function() {
     return view('about');
 });
@@ -27,12 +25,13 @@ Route::get('/admin', function() {
     return view('admin.index');
 });
 Route::group(['middleware'=>'admin'], function() {
+    Route::get('/changeStatus', 'GalleryController@toggleLive')->name('gallery.togglelive');
+    Route::post('/gallery/edit/{id}', 'GalleryController@galleryUpdate')->name('gallery.update');
+    Route::post('/art/{id}/edit', 'GalleryController@artUpdate')->name('artwork.update');
     Route::get('/home', 'GalleryController@index')->name('home');
     Route::post('/category/add', 'GalleryController@catAdd')->name('category.add');
     Route::post('/category/edit/{id}', 'GalleryController@catUpdate')->name('category.update');
     Route::post('/category/delete', 'GalleryController@catDestroy')->name('category.delete');
     Route::post('/home', 'GalleryController@saveResizeArt');
-    Route::resource('admin/users', 'AdminUsersController');
-    Route::resource('admin/gallery', 'AdminGalleryController');
-    Route::resource('admin/artwork2', 'AdminArtwork2Controller');
+
 });

@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "imagesloaded": "^4.1.4",
+        "lodash.shuffle": "^4.2.0",
         "masonry-layout": "^4.2.2"
     }
 }

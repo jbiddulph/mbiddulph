@@ -7,6 +7,7 @@
 require('./bootstrap');
 require('./../../public/js/jquery.fancybox.min');
 require('./masonry');
+require('./custom');
 window.Vue = require('vue');
 
 /**
