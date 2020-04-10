@@ -16,7 +16,7 @@ class GalleryController extends Controller
     public function index()
     {
         //
-        $artworks = Gallery::paginate(50);
+        $artworks = Gallery::orderBy('id', 'DESC')->paginate(50);
         $categories = Category::all();
         //
         return view('home', compact('artworks', 'categories'));
