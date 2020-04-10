@@ -54,6 +54,23 @@
   margin-bottom: 1.5%;
 }
 
+ul#categories {
+  padding: 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+#categories li {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#categories li .category {
+  display: flex;
+}
+
 .paginate {
   display: flex;
   justify-content: center;

@@ -32,6 +32,6 @@ Route::group(['middleware'=>'admin'], function() {
     Route::post('/category/add', 'GalleryController@catAdd')->name('category.add');
     Route::post('/category/edit/{id}', 'GalleryController@catUpdate')->name('category.update');
     Route::post('/category/delete', 'GalleryController@catDestroy')->name('category.delete');
-    Route::post('/home', 'GalleryController@saveResizeArt');
+    Route::post('/add-artwork', 'GalleryController@saveResizeArt');
 
 });

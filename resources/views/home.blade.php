@@ -17,12 +17,13 @@
                         @endif
                         <div class="form-group">
                             <h2>Categories</h2>
-                            <ul>
+                            <ul id="categories">
                                 @foreach($categories as $category)
-                                    <li>{{$category->categoryname}}
+                                    <li>
+                                        <div class="category">{{$category->categoryname}}</div>
                                         <span>
-                                            <a href="#" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editCatModal{{$category->id}}">Edit</a>
-                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteCategoryModal{{$category->id}}"> X </button>
+                                            <a href="#" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editCatModal{{$category->id}}"><i class="fas fa-pen-square"></i></a>
+                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteCategoryModal{{$category->id}}"> <i class="fas fa-trash-alt"></i> </button>
                                         </span>
                                     </li>
                                     <!-- Delete Category Modal -->
@@ -69,7 +70,7 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-dark btn-sm">Save changes</button>
+                                                        <button type="submit" class="btn btn-dark btn-sm">Save category</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -115,16 +116,12 @@
                     <strong>{{$message}}</strong>
                 </div>
             @endif
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addNewArtwork">
-                Add New Artwork
-            </button>
 
             <!-- Modal -->
             <div class="modal fade" id="addNewArtwork" tabindex="-1" role="dialog" aria-labelledby="addNewArtworkTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <form action="{{ url('home') }}" method="POST" enctype="multipart/form-data">@csrf
+                        <form action="{{ url('add-artwork') }}" method="POST" enctype="multipart/form-data">@csrf
                         <div class="modal-header">
                             <h5 class="modal-title" id="addNewArtworkLongTitle">Add New Artwork</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -153,14 +150,14 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Save new artwork</button>
                         </div>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Artwork</div>
                 <table class="table table-hover">
                     <tr>
                         <th scope="col">ID</th>
@@ -186,10 +183,10 @@
                         </td>
                         <td>
                             <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editArtdescModal{{$artwork->id}}">
-                                Edit
+                                <i class="fas fa-edit"></i>
                             </button>
                             <button type="button" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editArtModal{{$artwork->id}}">
-                                Change Art
+                                <i class="fas fa-camera"></i>
                             </button>
                         </td>
                     </tr>
@@ -264,8 +261,8 @@
                     <input type="file" id="artwork" name="newfile" class="image form-control">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-dark">Update Artwork</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-dark"><i class="fas fa-file-upload"></i> &nbsp;Change Artwork</button>
                 </div>
             </form>
         </div>
