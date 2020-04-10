@@ -51367,7 +51367,6 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 window.onload = function () {
-  alert('here');
   $('.toggle-live').change(function () {
     var islive = $(this).prop('checked') == true ? 1 : 0;
     var artwork_id = $(this).data('id');
