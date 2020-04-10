@@ -10,8 +10,7 @@
                     <div class="grid-item">
                         <a data-fancybox="gallery" data-fancybox-title="{{$artwork->title}}" href="/images/gallery/{{$artwork->file}}">
                             <span class="fancybox-title">{{$artwork->title}}</span>
-                            <img src="/thumbnail/{{$artwork->file}}" alt="{{$artwork->title}}">
-
+                            <img src="/thumbnail/{{$artwork->file}}" alt="{{$artwork->title}}" title="{{$artwork->title}}">
                         </a>
                     </div>
                     @endforeach
