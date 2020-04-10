@@ -1,4 +1,5 @@
 window.onload = function() {
+
     $('.toggle-live').change(function() {
         var islive = $(this).prop('checked') == true ? 1 : 0;
         var artwork_id = $(this).data('id');
