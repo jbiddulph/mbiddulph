@@ -77,7 +77,7 @@ class GalleryController extends Controller
 
     public function home()
     {
-        $artworks = Gallery::where('islive','=',1)->paginate(50);
+        $artworks = Gallery::where('islive','=',1)->orderBy('id', 'DESC')->paginate(50);
 
         return view('welcome', compact('artworks'));
     }
