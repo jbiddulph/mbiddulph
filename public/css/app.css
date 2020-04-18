@@ -78,7 +78,14 @@ ul.contact {
 
 ul.contact li {
   list-style-type: none;
-  font-size: 2rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  ul.contact li {
+    list-style-type: none !important;
+    font-size: 1.6rem !important;
+  }
 }
 
 .paginate {
