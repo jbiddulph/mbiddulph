@@ -71,6 +71,16 @@ ul#categories {
   display: flex;
 }
 
+ul.contact {
+  margin: 0px;
+  padding: 30px;
+}
+
+ul.contact li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
 .paginate {
   display: flex;
   justify-content: center;

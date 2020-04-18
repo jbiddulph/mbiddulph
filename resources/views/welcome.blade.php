@@ -37,7 +37,7 @@
                 </ul>
                 <p><img src="/images/melvyn.jpg" alt="Melvyn Biddulph - The Artist" width="100%"></p>
                 <p>I think I must have been about 12 when the new art teacher joined the school.</p>
-                <p>Miss Wiggins' hair was blonde, in a beehive style. She wore short micro skirts, sometimes with tassels. She would arrive at the school on her cobalt blue Vespa in hairnet and rollers. I think she was the best thing to ever happen to me. She told me I could draw. Got me to go to Saturday morning classes and encouraged me to join the Rochdale College of Art when I left School just before my 15th birthday. She had then, apparently, saved me from a life working in some factory.</p>
+                <p>Miss Wiggins' hair was blonde, in a beehive style. She wore mini skirts, sometimes with tassels. She would arrive at the school on her cobalt blue Vespa in hairnet and rollers. I think she was the best thing to ever happen to me. She told me I could draw. Got me to go to Saturday morning classes and encouraged me to join the Rochdale College of Art when I left School just before my 15th birthday. She had then, apparently, saved me from a life working in some factory.</p>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#readMore">
                     Read more
@@ -46,6 +46,11 @@
                 <br />
                 <h3>GROSSIC</h3>
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/5ZwmCjyZVe0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+                <ul class="contact">
+                    <li><i class="fas fa-book"></i>&nbsp;&nbsp;<a href="https://blurb.co.uk/books/1830214-f-r-a-g-i-l-e">F-R-A-G-I-L-E Book</a></li>
+                    <li><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;<a href="https://www.facebook.com/melvyn.biddulph">Facebook Profile</a></li>
+                    <li><i class="fas fa-phone-square-alt"></i>&nbsp;&nbsp;<a href="tel:07960 599219">07960 599219</a></li>
+                </ul>
                 <!-- Modal -->
                 <div class="modal fade" id="readMore" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -78,7 +83,7 @@
                                     <li>freedom from the demands of commercial galleries or clients to produce a particular kind of work;</li>
                                     <li>freedom from the influence of others’ opinions on my work.</li>
                                 </ul>
-                                <p>After my solo show in 2018 I thought my insistance on freedom in my work might be compromised. However people will have their options, however I don't feel this will alter my basic approach of never working to commission or producing artwork for anybody but myself.</p>
+                                <p>After my solo exhibition in 2018 I thought my freedom would be compromised. It hasn't, I still follow my basic approach of never producing art for anyone but myself.</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
