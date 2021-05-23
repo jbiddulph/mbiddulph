@@ -80,3 +80,19 @@ ul.contact {
         }
     }
 }
+
+@media only screen and (max-width: 420px) {
+    ul.contact {
+        li {
+            list-style-type: none!important;
+            font-size: 1.6rem!important;
+        }
+    }
+    .grid-item {
+        width:96%;
+        margin-right: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+        font-size:13px;
+    }
+}
