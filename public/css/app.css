@@ -26,11 +26,13 @@
 .grid-item {
   float: left;
   position: relative;
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .grid-item a {
   color: #000000;
+  display: flex;
+  border: 1px solid #666;
 }
 
 .grid-item a:hover {
@@ -38,16 +40,18 @@
 }
 
 .grid-item span.fancybox-title {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   padding: 4px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .grid-item img {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 .grid-item {
