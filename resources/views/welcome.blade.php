@@ -22,7 +22,9 @@
                         {{ session('status') }}
                     </div>
                 @endif
-
+                <div class="row paginate">
+                    {{ $artworks->links() }}
+                </div>
             </div>
             <div class="col-md-4 col-12 artistinfo">
                 <h2>About Melvyn Biddulph</h2>
