@@ -354,6 +354,7 @@ img {
 }
 
 svg {
+    height: 37px;
   overflow: hidden;
   vertical-align: middle;
 }
