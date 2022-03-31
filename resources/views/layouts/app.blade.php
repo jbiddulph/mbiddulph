@@ -78,7 +78,7 @@
     </div>
     <footer>
         <div class="copyright">
-            &copy; copyright 2020 Melvyn Biddulph
+            &copy; copyright 2022 Melvyn Biddulph
         </div>
     </footer>
     <!-- Scripts -->
