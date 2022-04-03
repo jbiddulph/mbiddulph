@@ -86,10 +86,16 @@ class GalleryController extends Controller
         $this->validate($request, [
             'title' => 'required'
         ]);
+        // Log::info('Showing requestsxxx: '.$request->isfeatured);
+
         $gallery = Gallery::findOrFail($id);
-        $gallery->update($request->all());
+        $gallery->update($request->except('isfeatured') + [
+            'isfeatured' => $request->boolean('isfeatured')
+        ], $request->all());
+
         return redirect()->back()->with('message','Gallery successfully updated!');
     }
+
     public function catAdd(CategoryPostRequest $request) {
         Category::create([
             'categoryname'=>request('categoryname')

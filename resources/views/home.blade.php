@@ -219,6 +219,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <span style="text-align:right; display:block;">
+                        <label for="title">Featured in Exhibition</label>
+                        <input value="1" name="isfeatured" type="checkbox" {{ $artwork->isfeatured ? 'checked' : '' }}> <br />
+                    </span>
                     <label for="title">Title</label>
                     <input type="text" class="form-control" name="title" value="{{$artwork->title}}">
                     <label for="title">Size</label>
@@ -232,7 +236,7 @@
                     </select>
                     <label for="title">Notes</label>
                     <textarea name="artistNotes" class="form-control" cols="30" rows="6">{{$artwork->artistNotes}}</textarea>
-                    Live: <input data-id="{{$artwork->id}}" name="islive" class="toggle-live" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $artwork->islive ? 'checked' : '' }}>
+                    Live <input data-id="{{$artwork->id}}" name="islive" class="toggle-live" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" {{ $artwork->islive ? 'checked' : '' }}>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
