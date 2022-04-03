@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'GalleryController@home');
+Route::get('/exhibit', 'GalleryController@exhibit');
 
 Auth::routes();
 
@@ -29,6 +30,7 @@ Route::group(['middleware'=>'admin'], function() {
     Route::post('/gallery/edit/{id}', 'GalleryController@galleryUpdate')->name('gallery.update');
     Route::post('/art/{id}/edit', 'GalleryController@artUpdate')->name('artwork.update');
     Route::get('/home', 'GalleryController@index')->name('home');
+    Route::get('/exhibition', 'GalleryController@exhibition')->name('exhibition');
     Route::post('/category/add', 'GalleryController@catAdd')->name('category.add');
     Route::post('/category/edit/{id}', 'GalleryController@catUpdate')->name('category.update');
     Route::post('/category/delete', 'GalleryController@catDestroy')->name('category.delete');

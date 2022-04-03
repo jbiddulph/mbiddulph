@@ -171,7 +171,11 @@
 
                 @foreach($artworks as $artwork)
                     <tr>
+                        @if($artwork->isfeatured)
+                        <td style="border-left: 6px solid #0db924;">{{$artwork->id}}</td>
+                        @else
                         <td>{{$artwork->id}}</td>
+                        @endif
                         <td>{{$artwork->title}}</td>
                         <td>{{$artwork->size}}</td>
                         <td>{{$artwork->category}}</td>

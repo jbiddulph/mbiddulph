@@ -21,6 +21,14 @@ class GalleryController extends Controller
         //
         return view('home', compact('artworks', 'categories'));
     }
+    public function exhibition()
+    {
+        //
+        $artworks = Gallery::where('isfeatured',1)->orderBy('id', 'DESC')->paginate(50);
+        $categories = Category::all();
+        //
+        return view('home', compact('artworks', 'categories'));
+    }
     public function artUpdate(Request $request, $id) {
         $this->validate($request, [
             'newfile' => 'required|image|mimes:jpeg,jpg,gif,png|max:2048'
@@ -80,6 +88,13 @@ class GalleryController extends Controller
         $artworks = Gallery::where('islive','=',1)->orderBy('id', 'DESC')->paginate(50);
 
         return view('welcome', compact('artworks'));
+    }
+
+    public function exhibit()
+    {
+        $artworks = Gallery::where('islive','=',1)->where('isfeatured', '=', 1)->orderBy('id', 'DESC')->paginate(50);
+
+        return view('exhibit', compact('artworks'));
     }
 
     public function galleryUpdate(Request $request, $id) {
