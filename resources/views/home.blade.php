@@ -231,6 +231,8 @@
                     <input type="text" class="form-control" name="title" value="{{$artwork->title}}">
                     <label for="title">Size</label>
                     <input type="text" class="form-control" name="size" value="{{$artwork->size}}">
+                    <label for="title">Price</label>
+                    <input type="text" class="form-control" name="price" value="{{$artwork->price}}">
                     <label for="title">Category</label>
                     <select name="category" class="form-control">
                         <option value="">Please select</option>
