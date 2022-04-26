@@ -24,7 +24,15 @@ class GalleryController extends Controller
     public function exhibition()
     {
         //
-        $artworks = Gallery::where('isfeatured',1)->orderBy('id', 'DESC')->paginate(50);
+        $artworks = Gallery::where('isfeatured',1)->orderBy('id', 'DESC')->paginate(200);
+        $categories = Category::all();
+        //
+        return view('home', compact('artworks', 'categories'));
+    }
+    public function nonexhibition()
+    {
+        //
+        $artworks = Gallery::where('isfeatured',0)->orderBy('id', 'DESC')->paginate(200);
         $categories = Category::all();
         //
         return view('home', compact('artworks', 'categories'));
@@ -96,6 +104,7 @@ class GalleryController extends Controller
 
         return view('exhibit', compact('artworks'));
     }
+
 
     public function galleryUpdate(Request $request, $id) {
         $this->validate($request, [
