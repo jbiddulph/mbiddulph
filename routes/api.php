@@ -21,8 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/artwork', [ArtworkAPIController::class, 'index']);
-Route::get('/exhibition', [ArtworkAPIController::class, 'exhibition']);
 Route::get('/artwork/{id}', [ArtworkAPIController::class, 'showArtwork']);
+Route::get('/exhibition', [ArtworkAPIController::class, 'exhibition']);
+Route::get('/exhibition/{id}', [ArtworkAPIController::class, 'showArtwork']);
 
 //Artwork
 // Route::get('/artwork', [GalleryController::class, 'index']);
