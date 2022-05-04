@@ -1,5 +1,7 @@
 <?php
 
+use App\Gallery;
+use App\Http\Controllers\ArtworkAPIController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/artwork', [ArtworkAPIController::class, 'index']);
+Route::get('/exhibition', [ArtworkAPIController::class, 'exhibition']);
+Route::get('/artwork/{id}', [ArtworkAPIController::class, 'showArtwork']);
+
+//Artwork
+// Route::get('/artwork', [GalleryController::class, 'index']);
+// Route::get('/exhibition', [GalleryController::class, 'index']);
+// Route::get('/artwork/{id}', [GalleryController::class, 'show']);
