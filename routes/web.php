@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'GalleryController@home');
+Route::get('/list', 'GalleryController@list');
 Route::get('/exhibit', 'GalleryController@exhibit');
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/about', function() {
     return view('about');
