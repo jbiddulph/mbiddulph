@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,16 +17,16 @@ Route::get('/', 'GalleryController@home');
 Route::get('/list', 'GalleryController@list');
 Route::get('/exhibit', 'GalleryController@exhibit');
 
-// Auth::routes();
+Auth::routes();
 
-Route::get('/about', function() {
+Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/admin', function() {
+Route::get('/admin', function () {
     return view('admin.index');
 });
-Route::group(['middleware'=>'admin'], function() {
+Route::group(['middleware' => 'admin'], function () {
     Route::get('/changeStatus', 'GalleryController@toggleLive')->name('gallery.togglelive');
     Route::post('/gallery/edit/{id}', 'GalleryController@galleryUpdate')->name('gallery.update');
     Route::post('/art/{id}/edit', 'GalleryController@artUpdate')->name('artwork.update');
@@ -37,5 +37,4 @@ Route::group(['middleware'=>'admin'], function() {
     Route::post('/category/edit/{id}', 'GalleryController@catUpdate')->name('category.update');
     Route::post('/category/delete', 'GalleryController@catDestroy')->name('category.delete');
     Route::post('/add-artwork', 'GalleryController@saveResizeArt');
-
 });
