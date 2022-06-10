@@ -33,6 +33,11 @@
 <!-- As a heading -->
 <nav class="navbar justify-content-between">
     <span class="navbar-brand mb-0 h1"><img src="/images/signature.png" alt="Melvyn Biddulph" title="Melvyn Biddulph" width="60%"></span>
+    <div class="app-store-download">
+        <a href="https://apps.apple.com/us/app/mbiddulph/id1627696444" target="_blank">
+            <img src="https://melvynbiddulph.co.uk/images/Download_on_the_App_Store_Badge.svg.png" width="200" alt="Download on the app store" />
+        </a>
+    </div>
 </nav>
     <div class="flex-center position-ref full-height">
 
