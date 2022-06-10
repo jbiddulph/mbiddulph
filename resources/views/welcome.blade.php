@@ -53,7 +53,7 @@
                 </ul>
                 <div>
                     <a href="https://apps.apple.com/us/app/mbiddulph/id1627696444" target="_blank">
-                        <img src="https://www.melvynbiddulph.co.uk/images/old-dog.jpg" width="100%" alt="Download on the app store" />
+                        <img src="https://melvynbiddulph.co.uk/images/old-dog.jpg" width="100%" alt="Download on the app store" />
                     </a>
                 </div>
                 <!-- Modal -->
