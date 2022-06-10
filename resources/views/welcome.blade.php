@@ -26,7 +26,7 @@
                     {{ $artworks->links() }}
                 </div>
             </div>
-            <div class="col-md-4 col-12 artistinfo">
+            <div class="col-md-4 col-12 artistinfo mb-20">
                 <div>
                     <a href="https://apps.apple.com/us/app/mbiddulph/id1627696444" target="_blank">
                         <img src="https://melvynbiddulph.co.uk/images/old-dog.jpg" width="100%" alt="Download on the app store" />
