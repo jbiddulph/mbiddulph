@@ -84,7 +84,7 @@
         <main class="py-4">
             @yield('content')
         </main>
-        <div>
+        <div class="app-store-download">
             <a href="https://apps.apple.com/us/app/mbiddulph/id1627696444" target="_blank">
                 <img src="https://melvynbiddulph.co.uk/images/Download_on_the_App_Store_Badge.svg.png" width="200" alt="Download on the app store" />
             </a>
