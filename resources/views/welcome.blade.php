@@ -51,6 +51,11 @@
                     <li><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;<a href="https://www.facebook.com/melvyn.biddulph">Facebook Profile</a></li>
                     <li><i class="fas fa-phone-square-alt"></i>&nbsp;&nbsp;<a href="tel:07534226701">07534 226701</a></li>
                 </ul>
+                <div>
+                    <a href="https://apps.apple.com/us/app/mbiddulph/id1627696444" target="_blank">
+                        <img src="https://www.melvynbiddulph.co.uk/images/old-dog.jpg" width="100%" alt="Download on the app store" />
+                    </a>
+                </div>
                 <!-- Modal -->
                 <div class="modal fade" id="readMore" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
