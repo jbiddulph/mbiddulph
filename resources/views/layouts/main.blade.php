@@ -26,8 +26,8 @@
     <script src="https://kit.fontawesome.com/e167166ec4.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jquery.fancybox.css') }}" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
 </head>
 <body>
 <!-- As a heading -->
@@ -46,6 +46,7 @@
                 @yield('content')
             </main>
         </div>
+
         <div class="app-store-download">
             <a href="https://apps.apple.com/us/app/mbiddulph/id1627696444" target="_blank">
                 <img src="https://melvynbiddulph.co.uk/images/Download_on_the_App_Store_Badge.svg.png" width="200" alt="Download on the app store" />
@@ -76,7 +77,7 @@
         </div>
     </footer>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </body>

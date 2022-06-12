@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', 'GalleryController@home');
+Route::get('/artwork/{id}', 'GalleryController@single');
 Route::get('/list', 'GalleryController@list');
 Route::get('/exhibit', 'GalleryController@exhibit');
 

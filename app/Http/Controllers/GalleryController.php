@@ -98,6 +98,13 @@ class GalleryController extends Controller
         return view('welcome', compact('artworks'));
     }
 
+    public function single(Request $request, $id)
+    {
+        $artworks = Gallery::findOrFail($id);
+
+        return view('single', compact('artworks'));
+    }
+
     public function list()
     {
         $artworks = Gallery::where('islive','=',1)->orderBy('id', 'DESC')->paginate(50);
