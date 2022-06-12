@@ -98,6 +98,14 @@ class GalleryController extends Controller
         return view('welcome', compact('artworks'));
     }
 
+    public function qrcodes()
+    {
+        //$artworks = Gallery::where('islive','=',1)->orderBy('id', 'DESC');
+        $artworks = Gallery::query()->take(10)->get();
+
+        return view('qrcodes', compact('artworks'));
+    }
+
     public function single(Request $request, $id)
     {
         $artworks = Gallery::findOrFail($id);

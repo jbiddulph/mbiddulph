@@ -53,4 +53,22 @@
     margin: 0 auto;
     padding:20px;
 }
+.qr-codes {
+    width: 718px;
+    margin-left: 22px;
+    .grid-item {
+        border: 1px solid #000000;
+        width:215px;
+        margin-bottom: 0px;
+        height:235px;
+        margin-left: 10px;
+        margin-right: 10px;
+        img {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
 

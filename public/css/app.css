@@ -210,6 +210,28 @@ footer {
   padding: 20px;
 }
 
+.qr-codes {
+  width: 718px;
+  margin-left: 22px;
+}
+
+.qr-codes .grid-item {
+  border: 1px solid #000000;
+  width: 215px;
+  margin-bottom: 0px;
+  height: 235px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.qr-codes .grid-item img {
+  text-align: center;
+}
+
+.qr-codes .grid-item p {
+  text-align: center;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors

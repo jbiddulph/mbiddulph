@@ -23,6 +23,7 @@ window.Vue = require('vue');
 
 Vue.component('front-page', require('./components/Front.vue').default);
 Vue.component('single-artwork', require('./components/SingleArtwork.vue').default);
+Vue.component('qr-codes', require('./components/QrCodes.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
