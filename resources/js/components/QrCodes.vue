@@ -20,7 +20,7 @@
           methods: {
               loadArtwork: function() {
                   //load API
-                  axios.get('https://melvynbiddulph.co.uk/api/artwork')
+                  axios.get('https://melvbiddulph.art/api/artwork')
                   .then((response) => {
                       this.artworks = response.data
                   })

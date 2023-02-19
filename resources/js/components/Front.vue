@@ -23,7 +23,7 @@
                     <div class="col-md-4 col-12 artistinfo">
                         <div style="margin-bottom: 20px;">
                             <a href="https://apps.apple.com/us/app/mbiddulph/id1627696444" target="_blank">
-                                <img src="https://melvynbiddulph.co.uk/images/old-dog.jpg" width="100%" alt="Download on the app store" />
+                                <img src="https://melvbiddulph.art/images/old-dog.jpg" width="100%" alt="Download on the app store" />
                             </a>
                         </div>
                         <h2>About Melvyn Biddulph</h2>
@@ -110,7 +110,7 @@
           methods: {
               loadArtwork: function() {
                   //load API
-                  axios.get('https://melvynbiddulph.co.uk/api/artwork')
+                  axios.get('https://melvbiddulph.art/api/artwork')
                   .then((response) => {
                       this.artworks = response.data
                   })
