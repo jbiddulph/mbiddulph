@@ -37654,7 +37654,7 @@ var staticRenderFns = [
           [
             _c("img", {
               attrs: {
-                src: "https://melvbiddulph.art/images/old-dog.jpg",
+                src: "https://melvbiddulph.art/images/mobile-app.jpg",
                 width: "100%",
                 alt: "Download on the app store"
               }
@@ -38043,7 +38043,7 @@ var staticRenderFns = [
           [
             _c("img", {
               attrs: {
-                src: "https://melvbiddulph.art/images/old-dog.jpg",
+                src: "https://melvbiddulph.art/images/mobile-app.jpg",
                 width: "100%",
                 alt: "Download on the app store"
               }
