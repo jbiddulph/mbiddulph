@@ -110,7 +110,7 @@
           methods: {
               loadArtwork: function() {
                   //load API
-                  axios.get('https://melvynbiddulph.co.uk/api/artwork/'+this.$route.params.id)
+                  axios.get('https://melvbiddulph.art/api/artwork/'+this.$route.params.id)
                   console.log('the ID is: ', this.$route.params.id)
                   .then((response) => {
                       this.artwork = response.data
