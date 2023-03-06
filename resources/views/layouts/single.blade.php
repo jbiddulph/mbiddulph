@@ -43,6 +43,7 @@
 
 
         <div id="app">
+            <p>For all purchase enquiries, please call: 07935 085 736</p>
             <single-artwork></single-artwork>
         </div>
 
