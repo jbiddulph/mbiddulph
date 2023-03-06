@@ -43,6 +43,7 @@
 
         <div class="content">
             <main class="py-4">
+                <p>For all purchase enquiries, please call: 07935 085 736</p>
                 @yield('content')
             </main>
         </div>
