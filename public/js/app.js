@@ -37755,8 +37755,8 @@ var staticRenderFns = [
         _c("li", [
           _c("i", { staticClass: "fas fa-phone-square-alt" }),
           _vm._v("  "),
-          _c("a", { attrs: { href: "tel:07534226701" } }, [
-            _vm._v("07534 226701")
+          _c("a", { attrs: { href: "tel:07935085736" } }, [
+            _vm._v("07935 085736")
           ])
         ])
       ]),
@@ -38144,8 +38144,8 @@ var staticRenderFns = [
         _c("li", [
           _c("i", { staticClass: "fas fa-phone-square-alt" }),
           _vm._v("  "),
-          _c("a", { attrs: { href: "tel:07534226701" } }, [
-            _vm._v("07534 226701")
+          _c("a", { attrs: { href: "tel:07935085736" } }, [
+            _vm._v("07935 085 736")
           ])
         ])
       ]),
