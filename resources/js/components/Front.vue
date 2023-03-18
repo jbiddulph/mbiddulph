@@ -8,9 +8,9 @@
 
                                 <div class="grid-item" v-for="artwork in artworks" :key="artwork.id">
                                     <a data-fancybox="gallery" data-fancybox-title="artwork.title" :href='"/images/gallery/"+artwork.file'>
-                                        <span class="fancybox-title">{{ artwork.title }} <strong>{{ artwork.id }}</strong></span>
+                                        <span class="fancybox-title">{{ artwork.title }} <strong>#{{ artwork.id }}</strong></span>
                                         <img :src='"/thumbnail/"+artwork.file' :alt="artwork.file" :title="artwork.title">
-                                        {{ artwork.title }} <strong>{{ artwork.id }}</strong>
+                                        {{ artwork.title }} <strong>#{{ artwork.id }}</strong>
                                     </a>
                                 </div>
 
