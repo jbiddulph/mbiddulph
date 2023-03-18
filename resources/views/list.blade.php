@@ -16,7 +16,7 @@
                                     <img src="/thumbnail/{{$artwork->file}}" alt="{{$artwork->title}}" title="{{$artwork->title}}">
                                 </a>
                                 <div class="content">
-                                    <h2>{{$artwork->title}} (#{{ $artwork->id }})</h2>
+                                    <h2>{{$artwork->title}} ({{ $artwork->id }})</h2>
                                     <h5>{{$artwork->artistNotes}}</h5>
                                 </div>
                             </div>
