@@ -8,9 +8,9 @@
 
                                 <div class="grid-item">
                                     <a data-fancybox="gallery" data-fancybox-title="artwork.title" :href='"/images/gallery/"+artwork.file'>
-                                        <span class="fancybox-title">{{ artwork.title }}</span>
+                                        <span class="fancybox-title">{{ artwork.title }}  ({{ artwork.id }})</span>
                                         <img :src='"/thumbnail/"+artwork.file' :alt="artwork.file" :title="artwork.title">
-                                        {{ artwork.title }}
+                                        {{ artwork.title }}  ({{ artwork.id }})
                                     </a>
                                 </div>
 
