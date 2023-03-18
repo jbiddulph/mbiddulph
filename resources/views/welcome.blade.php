@@ -9,7 +9,7 @@
     {{--                <div class="grid-item col-sm-6 col-md-2 col-lg-2">--}}
                     <div class="grid-item">
                         <a data-fancybox="gallery" data-fancybox-title="{{$artwork->title}}" href="/images/gallery/{{$artwork->file}}">
-                            <span class="fancybox-title">{{$artwork->title}}</span>
+                            <span class="fancybox-title">{{$artwork->title}} (#{{ $artwork->id }})</span>
                             <img src="/thumbnail/{{$artwork->file}}" alt="{{$artwork->title}}" title="{{$artwork->title}}">
                         </a>
                     </div>
