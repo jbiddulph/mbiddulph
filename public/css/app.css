@@ -32,7 +32,6 @@
 .grid-item a {
   color: #000000;
   display: flex;
-  border: 1px solid #666;
 }
 
 .grid-item a:hover {
